@@ -11,7 +11,7 @@
 }
 
 :root {
-    --color-primary: #93dc49;
+    --color-primary: #89cd46;
     --color-disabled: #a09f9f;
     --color-accent: #446329;
     --color-bg: #131416;
@@ -63,6 +63,50 @@ nav div.nav-items {
     cursor: pointer;
 }
 
+/* HERO DIV */
+.hero-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-heading {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    margin-top: 6rem;
+
+    background: -webkit-linear-gradient(30deg, #a9a9a9, #565656);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-paragraph {
+    width: 55%;
+    text-align: center;
+    line-height: 2;
+
+    background: -webkit-linear-gradient(30deg, #9a9a9a, #383838);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.get-started-button {
+    padding: 1rem 2.5rem;
+    color: var(--color-active);
+    background: var(--color-primary);
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    border: 1px solid var(--color-primary)
+}
+
+.get-started-button:hover {
+    background-color: rgba(17, 105, 9, 0.905);
+    cursor: pointer;
+}
+/* Extra classes */
 .h:hover {
     cursor: pointer;
 }
+
