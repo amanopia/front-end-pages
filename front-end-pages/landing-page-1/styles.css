@@ -12,6 +12,39 @@
 
 :root {
     --color-primary: #93dc49;
-    --color-disabled: #646464;
+    --color-disabled: #a09f9f;
     --color-accent: #446329;
+    --color-bg: #131416;
+    --color-active: #fff;
+    --container-lg: 80%;
+}
+
+body {
+    background: #131416;
+    font-family: "Poppins";
+    width: var(--container-lg);
+    margin: 0 auto;
+}
+
+nav {
+    color: var(--color-active);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin: 2rem auto 2rem;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+nav div.nav-items {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links {
+    transition: all 0.4s ease;
 }
