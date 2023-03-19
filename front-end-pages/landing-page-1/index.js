@@ -1,11 +1,11 @@
 const navLinks = document.querySelectorAll('.nav-links');
 
-for(let i = 1; i<navLinks.length; i++){
-    console.log(navLinks[i]);
-    navLinks[i].style.color = "var(--color-disabled)";
-}
 
-// console.log()
+for(let i = 1; i<navLinks.length; i++){
+    navLinks[0].style.fontWeight = 700;
+    navLinks[i].style.color = "var(--color-disabled)";
+    navLinks[i].style.transition = "all 0.4s ease";
+}
 
 for(let i = 1; i<navLinks.length;i++){
     navLinks[i].addEventListener('mouseover', function(){
