@@ -5,7 +5,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     outline: 0;
     border: 0;
 }
@@ -105,6 +105,43 @@ nav div.nav-items {
     background-color: rgba(17, 105, 9, 0.905);
     cursor: pointer;
 }
+
+.buttons-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.watch-tutorials-button{
+    color: var(--color-active);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+svg.play-icon {
+    width: 50px;
+}
+
+/* USER INFO */
+
+.user-info {
+    display: flex;
+    color: var(--color-disabled);
+    gap: 4rem;
+    margin-top: 1.5rem;
+}
+
+.user-info span {
+    font-weight: 700;
+    color: var(--color-active);
+}
+
+/* PARTNER LINKS */
+.coin {
+    height: 10rem;
+}
+
 /* Extra classes */
 .h:hover {
     cursor: pointer;
