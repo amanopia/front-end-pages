@@ -24,6 +24,53 @@ body {
     font-family: "Poppins";
     width: var(--container-lg);
     margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.blob {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    /* display: none; */
+}
+
+.blob1, .blob2 {
+    position: absolute;
+    height: 40rem;
+    width: 40rem;
+}
+
+.blob1 {
+    right: 10rem;
+    top: 0rem;
+    z-index: -1;
+    animation-delay: 2s;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    filter: blur(100px) opacity(0.4);
+
+}
+
+
+
+.blob2 {
+    right: 0rem;
+    top: 0rem;
+    z-index: -2;
+    animation: rotate 5s infinite;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    filter: blur(100px) opacity(0.4);
+}
+
+@keyframes rotate {
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
 }
 
 nav {
@@ -74,10 +121,8 @@ nav div.nav-items {
 .hero-heading {
     text-align: center;
     line-height: 1.5;
-    font-size: 1.8rem;
     margin-top: 6rem;
-
-    background: -webkit-linear-gradient(30deg, #a9a9a9, #565656);
+    background: -webkit-linear-gradient(30deg, #a9a9a9, #797878, #444444);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -92,6 +137,14 @@ nav div.nav-items {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.buttons-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .get-started-button {
     padding: 1rem 2.5rem;
     color: var(--color-active);
@@ -106,11 +159,7 @@ nav div.nav-items {
     cursor: pointer;
 }
 
-.buttons-container {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-}
+
 
 .watch-tutorials-button{
     color: var(--color-active);
@@ -158,16 +207,32 @@ svg.play-icon {
     cursor: pointer;
 }
 
+/* MEDIA QUERIES */
 @media (min-width: 320px) {
+    .blob {
+        flex-direction: column;
+    }
+
     .hero-heading {
-        font-size: 0.7rem;
+        font-size: 1.2rem;
         line-height: 1.2;
     }
+
     
     .hero-paragraph {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         width: 70%;
         line-height: 1.5;
+    }
+    /* HERO BUTTONS */
+    .buttons-container {
+        flex-direction: column;
+    }
+    /* USER INFO */
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
     .partner-links {
         gap: 0;
@@ -179,27 +244,40 @@ svg.play-icon {
 
 @media (min-width: 480px) {
     .hero-heading {
-        font-size: 1rem;
+        font-size: 1.3rem;
         line-height: 1.4;
-        width: 80%;
-        
+        width: 80%;   
     }
 
     .hero-paragraph {
         font-size: 0.9rem;
         line-height: 1.7;
-        width: 70%;
     }
 }
 
 @media (min-width: 600px){
+
     .hero-heading {
         width: 90%;
     }
+
+    .buttons-container {
+        flex-direction: row;
+    }
+
+    .user-info {
+        flex-direction: row;
+        gap: 4rem;
+    }
 }
 @media (min-width: 768px) {
+
+    .blob{
+        flex-direction: row;
+    }
+
     .hero-heading {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         width: 100%;
         line-height: 1.5;
         width: 100%;
@@ -211,6 +289,7 @@ svg.play-icon {
 }
 
 @media (min-width: 1024px) {
+
     .hero-heading {
         font-size: 1.5rem;
     }
