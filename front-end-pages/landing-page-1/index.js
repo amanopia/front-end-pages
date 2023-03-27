@@ -1,5 +1,5 @@
 const navLinks = document.querySelectorAll('.nav-links');
-
+const brandLogo = document.querySelectorAll('.brand-logo');
 
 for(let i = 1; i<navLinks.length; i++){
     navLinks[0].style.fontWeight = 700;
@@ -16,3 +16,18 @@ for(let i = 1; i<navLinks.length;i++){
         navLinks[i].style.color = "var(--color-disabled)"
     })
 }
+
+// INTERSECTION OBSERVER
+
+const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+        entry.target.classList.toggle('show', entry.isIntersecting);
+        if(entry.isIntersecting) observer.unobserve(entry.target);
+    })
+},{
+   rootMargin: "-100px"
+})
+
+brandLogo.forEach(function(logo){
+    observer.observe(logo)
+})

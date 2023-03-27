@@ -186,21 +186,6 @@ svg.play-icon {
     color: var(--color-active);
 }
 
-/* PARTNER LINKS */
-.partner-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 4rem;
-    margin-top: 4rem;
-    
-}
-
-.partner-links > [class="coin"] {
-    
-    width: 12rem;
-    filter: grayscale(100%);
-}
 
 /* Extra classes */
 .h:hover {
@@ -238,7 +223,7 @@ svg.play-icon {
         gap: 0;
     }
     .partner-links > [class="coin"] {
-        width: 8rem;
+        width: 12rem;
     }
 }
 

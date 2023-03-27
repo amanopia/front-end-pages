@@ -1,0 +1,21 @@
+.partner-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.brand-logo {
+    width: 12rem;
+    filter: grayscale(100%);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
