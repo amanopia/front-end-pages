@@ -1,6 +1,7 @@
 const navLinks = document.querySelectorAll('.nav-links');
 const brandLogo = document.querySelectorAll('.brand-logo');
-
+const headingChildNodes = document.querySelector('.headings').childNodes;
+console.
 for(let i = 1; i<navLinks.length; i++){
     navLinks[0].style.fontWeight = 700;
     navLinks[i].style.color = "var(--color-disabled)";
@@ -31,3 +32,4 @@ const observer = new IntersectionObserver(function(entries){
 brandLogo.forEach(function(logo){
     observer.observe(logo)
 })
+

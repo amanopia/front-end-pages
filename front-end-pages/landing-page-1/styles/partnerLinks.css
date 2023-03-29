@@ -10,7 +10,7 @@
     width: 12rem;
     filter: grayscale(100%);
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(2rem);
     transition: all 1s ease;
 }
 
