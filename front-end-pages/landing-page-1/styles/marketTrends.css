@@ -1,6 +1,6 @@
 .market-trend {
     color: #fff;
-    margin-top: 7rem;
+    margin: 7rem 0 20rem 0;
 }
 
 .headings {
@@ -10,23 +10,32 @@
     align-items: center;
 }
 
-.headings > p.title {
+.trend-title {
     color: var(--color-primary);
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 1s ease;
 }
 
-.headings h3 {
+.trend-heading {
     line-height: 1.3;
     background: -webkit-linear-gradient(30deg, #a9a9a9, #797878, #444444);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 1s ease;
 }
 
-.headings [class="description"] {
+.trend-description {
     background: -webkit-linear-gradient(30deg, #9a9a9a, #383838);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 1s ease;
 }
 
 .market-trend-navigation {
@@ -43,15 +52,18 @@
     gap: 1rem;
 }
 
-.market-trend-navigation ul > li {
+.trend-hidden-items {
     font-size: 0.7rem;
     padding: 0.6rem ;
     background: hsla(0, 0%, 26%, 0.266);
     border-radius: 5px;
     border: 0.2px solid hsla(0, 0%, 71%, 0.11);
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 0.4s ease;
 }
 
-.market-trend-navigation input {
+.trend-input {
     background: rgba(13, 74, 8, 0.322);
     height: 1rem;
     color: #fff;
@@ -59,6 +71,9 @@
     border: 1px solid var(--color-primary);
     border-radius: 5px;
     width: max-content;
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 0.4s ease;
 }
 @media (min-width: 320px) {
     .headings {
@@ -66,13 +81,13 @@
         text-align: center;
     }
     
-    .headings h3 {
+    .trend-heading {
         font-size: 2rem;
         font-weight: 500;
         width: 75%;
     }
 
-    .headings p.description  {
+    .trend-description  {
         width: 65%;
         font-size: 0.8rem;
         line-height: 2;
@@ -94,12 +109,17 @@
 }
 
 @media (min-width: 1024px) {
-    .headings h3 {
+    .trend-heading {
         font-size: 2.5rem;
         width: 60%;
     }
-    .headings p.description {
+    .trend-description {
         font-size: 1rem;
         width: 50%;
     }
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0px);
 }
